@@ -1,7 +1,13 @@
 import { Component } from 'react';
 import { FormTag, InputField, FormBtn } from './Form.styled';
+import PropTypes from 'prop-types';
 
 export default class Form extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
+  
   state = {
     name: '',
     number: '',
@@ -57,3 +63,4 @@ export default class Form extends Component {
     );
   }
 }
+
